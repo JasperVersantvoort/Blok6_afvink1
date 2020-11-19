@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import java.util.Collections;
+
 
 public class Opdracht2 {
 
@@ -9,11 +9,15 @@ public class Opdracht2 {
         for (int i = 0; i < 1000; i++) {
             intlijst.add(random.getGetal());
         }
-
+        long startTime = System.nanoTime();
         System.out.println(sort(intlijst));
+        long endTime = System.nanoTime();
+        System.out.println("That took " + (endTime - startTime) + " milliseconds");
+
     }
 
     public static ArrayList<Integer> sort(ArrayList<Integer> int_lijst) {
+
 
         for (int i = 1; i < int_lijst.size(); i++) {
 
@@ -34,6 +38,7 @@ public class Opdracht2 {
 
             }
         }
+
         return int_lijst;
     }
 
